@@ -1,0 +1,21 @@
+tkhelp CHANGELOG
+================
+
+Version 2.1.1
+=>Just the first hosted Version on Github.com - It is the same as v2.1
+
+Version 2.1
+=>New SplashScreen
+=->Good integration, because the Class extends the Toplevel-Widget of the Tk/Tcl-Library
+=->Simply installing into the program
+
+
+Version 2.0
+=>Completely Update
+=>Webinterface with CGI-Support
+=->Simple to add new content
+=->auto-search to new content and add it to the db
+
+Version 1.5.5
+=>Updated the PyCode to a better version
+=->'config'-Method is in use
