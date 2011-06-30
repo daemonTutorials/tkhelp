@@ -32,7 +32,7 @@ defButtons = "Definiere Buttons…"
 defFrames = "Definieren Frames…"
 defButtonWidth = "Definieren Buttonbreite…"
 defFooter = "Definiere Footer…"
-footer = "(c) by Daemon Tutorials :: RC 2"
+footer = "(c) by Daemon Tutorials :: Alpha 2.1.1"
 
 stRow = "1 Spalte hinzufuegen"
 ndRow = "2 Spalte hinzufuegen"

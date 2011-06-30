@@ -1,38 +1,34 @@
 #!/usr/bin/python3.1
-# -*- coding: utf-8 -*-
+#!-*- coding: utf-8 -*-
 
 #@author: Maik Wöhl
-#@contact: logander4@icmail.com
-#@copyright: Daemon Tutorials
-#@license: MIT License
-#@status: Stable Release
-#@version: 2.1
-#List of required files:
-#-tkhelp.py
-#-tkhelp_lang_de.py
-#-tkh_splash2.py
-#-test.gif
-#-tkhelp_lang_de.py
+#@contact: maik.woehl@web.de
+#@copyright: Daemon Tutorials - http://www.daemon-tuts.de
+#@license: GNU General Public License (GPL)
+#@status: Alpha
+#@version: 2.1.1
 
 import webbrowser # Webbrowser
 import tkinter # Tk interface
 import tkinter.scrolledtext # Tk scrolledText
-import tkhelp_lang_de as LANG # Deutsche Sprachdatei
 #import tkh_splash2 # SplashScreen
 import tkh_splash3 # SplashScreen v3
 import dt_tkobjects # Toplevel-Factory-Klasse
+import config # Import the config file
 
+if config.language == "de":
+    import tkhelp_lang_de as LANG # Deutsche Sprachdatei
+elif config.language == "eng":
+    import tkhelp_lang_eng as LANG # Englische Sprachdatei
 
 root = tkinter.Tk()
-#splashParent = root
-#tkh_splash2.splash(splashParent, "TKHelp 2.1", "test.gif", 500, 350)
 
 print(LANG.startTKHmsg)
 root.title(LANG.tkh_title)
 
 splash = tkh_splash3.DtSplash(root, width=500, height=350)
 splash.title("Tkhelp v2.1")
-splash.set_image("test.gif")
+splash.set_image(config.image_url)
 splash.render()
 
 dtObj = dt_tkobjects.dtObjects(root)
